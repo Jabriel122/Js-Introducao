@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+       .layout-grid {
+    /* border: 1px solid salmon; */
+    width: 90%;
+    height: 100%;
+    margin: 0 auto;
+    }
+
+    .body{
+        background-color: rgba(57, 53, 53, 0.695);
+    }
+</style>
+<body>
+    <!-- Criar um formulário para receber o nome do usuário -->
+    <!-- e substituir por um nickname -->
+    <!-- ao clicar do botão o nickname deve ser exibido na tela -->
+
+    <section class ="layout-grid">
+
+        <h1>USUARIO</h1>
+
+        <form onsubmit="nomear()">
+            <label for="nome"> Insira o nome</label>
+            <input type="text" id="nome">
+            <br><br>
+
+            <label for="nickname"> Insira o NickName</label>
+            <input type="text" id="nickname">
+            <button>Inserir Nome</button>
+
+
+            <p>
+                Nickname:
+                <strong id="result"></strong>
+            </p>
+        </form>
+    
+    </section>
+    <script src="./scripts/String.js">
+
+    </script>
+</body>
+</html>
