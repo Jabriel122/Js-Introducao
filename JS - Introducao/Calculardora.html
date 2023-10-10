@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .box{
+        border: 2px solid red;
+
+        flex-direction: column;
+        justify-content: center;
+
+        
+    }
+
+    .layout-grid {
+    /* border: 1px solid salmon; */
+    width: 90%;
+    height: 100%;
+    margin: 0 auto;
+    }
+
+    .section-box{
+        /* border: 2px solid green; */
+        /* justify-content: center; */
+
+        flex-direction: column;
+        align-items: center;
+    }
+
+
+</style>
+<body>
+    <section class ="layout-grid box">
+        <div class="section-box">
+            <h1>Simple Calc</h1>
+        </div>
+
+        <form onsubmit="calcular()" >
+            <label for="n1"> Primeiro Número</label>
+            <input type="number" id="n1">
+
+            <label for="n2">Segundo Número</label>
+            <input type="number" id="n2">
+            <br><br>
+
+            <label for="operacao">Operação</label>
+            <select id="operacao">
+                <option value="">Selecione</option>
+                <option value="+">Soma</option>
+                <option value="-">Subtração</option>
+                <option value="/">Divisão</option>
+                <option value="*">Multipilcação</option>
+            </select>
+            <button>Calcular</button>
+        </form>
+    </section>
+
+    <script>
+        function calcular(){
+
+            event.preventDefault(); //para o submit od formulario
+            //criar uma variavel para cada número
+            let n1 = parseFloat(document.getElementById('n1').value);
+            let n2 = parseFloat(document.getElementById('n2').value);
+            let op = document.getElementById('operacao').value;
+            let resultado; //undefined
+
+            if(op == '+'){
+                resultado = somar(n1, n2);
+                alert (`A resposta é ${resultado}`);
+            } else if (op == '-'){
+                resultado = subtrair(n1, n2);
+                alert (`A resposta é ${resultado}`);
+            }else if(op == '/'){
+                resultado = divisao(n1,n2);
+                alert (`A resposta é ${resultado}`);
+            }else if(op == '*'){
+                resultado = multiplicação(n1,n2);
+                alert (`A resposta é ${resultado}`);
+            }
+
+            //criar uma variavel para o resultado da soma
+            ///const resultado = subtrair(n1, n2);
+
+            //exibir resultado em uma alert - utilizar interpolação
+
+        }
+
+        function subtrair(x, y){
+            return x - y;
+        }
+
+        function somar(x, y){
+            return parseFloat(x) + parseFloat(y);
+        }
+
+        function subtrair(x, y){
+            return x - y;
+        }
+        function multiplicação(x,y){
+            return x * y;
+        }
+
+        function divisao(x,y){
+            return x/y;
+        }
+
+    </script>
+</body>
+
+</html>
