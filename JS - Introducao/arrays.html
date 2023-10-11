@@ -2,21 +2,80 @@
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
 <body>
+    
     <script>
-        let frutas = ['banana', 'maçã','morango']
+        let frutas = ['banana', 'maçã', 'morango'];
 
         console.log(frutas);
-        console.log(`Quantidades de frutas: ${frutas.length}`);
-        frutas.push('mamão')
+        console.log(`Quantidade de frutas: ${frutas.length}`);
+       
         frutas.push('uva')
-        frutas.push('Laranja')
-        frutas.push('Goiabada')
-        console.log(`Quantidades de frutas? ${frutas.length}`)
+        frutas.push('mamão')
+        frutas.push('amora')
+        
+        console.log(`Quantidade de frutas: ${frutas.length}`);
+        
+        frutas.sort();//ordena os valores do array
+
+
+        console.log();
+        console.log();
+        
+        // for(let index = 0; index < frutas.length; index++){
+        //     console.log(`Frutas${index + 1} ${frutas[index]}`);
+        // }
+
+        // frutas.forEach(function(frutas, i){
+        //     console.log(`Frutas ${i+1} ${frutas}`);
+        // })
+
+        let prateleira = [
+            "Cerveja",
+            "Coca-cola",
+            "Água",
+            "Getoreide",
+            "Corote",
+            "H20",
+            "Guarana Antártica",
+            "Tubaina"
+        ];
+
+        let bebida = prateleira[7]
+
+        switch(bebida){
+            case "Cerveja":
+                console.log("Achei sua cerveja");
+                break;
+            case "Coca-Cola":
+                console.log("Achei sua Coca!!");
+                break;
+            case "Água":
+                console.log("Acho bom você ter pedido água!");
+                break;
+            case "Getoreide":
+                console.log("Achei sua Getoreide!!");
+                break;
+            case "Corote":
+                console.log("Achei sua Corote!!");
+                break;
+            case "H20":
+                console.log("Achei sua H20!!");
+                break;        
+            case "Guarana Antártica":
+                console.log("AQUI SEU GUARANA ANTÁRTICA");
+                break;
+            case "Tubaina":
+                console.log("To-to-toma su-su-sua Tu-tubaina");
+                break;  
+            default:
+                console.log(`Náo temos essa bebida: ${bebida}`);
+                break;     
+        }
+        
     </script>
 </body>
 </html>
